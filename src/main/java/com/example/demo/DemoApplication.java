@@ -2,10 +2,7 @@ package com.example.demo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @SpringBootApplication
@@ -25,5 +22,19 @@ public class DemoApplication {
 	public String welcome(@RequestBody(required = false) String test) {
 		System.out.println("Test " + test.toString());
 		return "Hello";
+	}
+
+	@RestController
+	@RequestMapping
+	public class HomeController {
+		private String name;
+		private Integer age;
+		private Boolean haveWife;
+
+		public HomeController() {
+			this.name ="Thinhpq";
+			this.age = 20;
+			haveWife=false;
+		}
 	}
 }
