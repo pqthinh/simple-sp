@@ -1,6 +1,5 @@
 package com.example.demo;
 
-
 import com.example.demo.model.Employee;
 import com.example.demo.repository.EmployeeRepository;
 import org.springframework.boot.SpringApplication;
